@@ -2,6 +2,14 @@
 @import fonts
 @import libs
 
+* 
+	box-sizing: border-box
+
+ul 
+	list-style: none
+	margin: 0
+	padding: 0
+
 ::placeholder
 	color: #666
 
@@ -25,38 +33,91 @@ body
 	overflow-x: hidden
 	color: $text
 
-// Custom Sass / Remove before use
-
-.container
-	max-width: 700px
-	padding:
-		right: $gutter/2
-		left: $gutter/2
-	margin:
-		left: auto
-		right: auto
-
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
-.example-grid
-	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 1fr 1fr
-	grid-template-areas: "left right"
-	> div:first-child
-		grid-area: left
-	> div:last-child
-		grid-area: right
-	+media-breakpoint-down(xs)
-		display: block
-		> div
-			padding: $gutter/2 0
-	
-.example-img
-	width: 100%
 
-.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+.container
+	max-width: 1130px
+	margin:
+		left: auto
+		right: auto
+
+.header
+	&__logo
+		text-align: center
+		margin-top: 142px
+		&-img
+			vertical-align: bottom
+	&__content
+		height: 193px
+		border: 1px solid #0055D3
+		border-radius: 15px
+		overflow: hidden
+
+.header-top
+	display: flex
+	// align-items: center
+	justify-content: space-between
+	background-color: #0055D3
+	// padding: 30px
+	height: 127px
+	&__btn
+		width: 206px
+		height: 51px
+		margin-top: 39px
+		margin-left: 29px
+		background: #FFF602
+		border-radius: 98px
+		border: none
+		outline: none
+		text-transform: uppercase
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		font-size: 14px
+		line-height: 17px
+	&__list
+		display: flex
+		margin-top: 30px
+	&__item
+		width: 36px
+		height: 36px
+		color: #ffffff
+		margin-right: 64px
+		// display: flex
+		// flex-direction: column
+		// align-items: center
+		&:last-child
+			margin-right: 78px
+	&__link
+		display: flex
+		flex-direction: column
+		align-items: center
+		color: #ffffff
+		text-decoration: none
+	&__text
+		margin-top: 9px
+		font-size: 13px
+		font-family: Montserrat, sans-serif
+		font-weight: normal
+		line-height: 180%
+
+.header-bottom
+	height: 66px
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 20px
+	&__item
+		flex-basis: 152px
+		height: 20px
+	&__link
+		color: #000
+		text-decoration: none
+		font-family: Montserrat, sans-serif
+		font-weight: normal
+		line-height: 17px
+		text-transform: uppercase
