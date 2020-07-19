@@ -10,6 +10,14 @@ ul
 	margin: 0
 	padding: 0
 
+p 
+	margin: 0
+	padding: 0	
+
+h1, h2 
+	margin: 0
+	padding: 0
+
 ::placeholder
 	color: #666
 
@@ -38,9 +46,24 @@ body
 	max-width: 100%
 	height: auto
 
+.btn
+	background: #FFF602
+	font-family: Montserrat, sans-serif
+	font-weight: bold
+	border-radius: 98px
+	border: none
+	outline: none
+	text-transform: uppercase
+	cursor: pointer
+	transition: opacity .3s 
+	&:hover
+		opacity: .7
+
+.btn--gray
+	background-color: #D7D7D7
 
 .container
-	max-width: 1130px
+	max-width: 1030px
 	margin:
 		left: auto
 		right: auto
@@ -61,21 +84,16 @@ body
 	display: flex
 	// align-items: center
 	justify-content: space-between
-	background-color: #0055D3
+	// background: no-repeat url("../img/header-bg.svg")
+	// background-size: cover
 	// padding: 30px
+	background: linear-gradient(0deg, rgba(0, 85, 211, 0.9), rgba(0, 85, 211, 0.9))
 	height: 127px
 	&__btn
 		width: 206px
 		height: 51px
 		margin-top: 39px
 		margin-left: 29px
-		background: #FFF602
-		border-radius: 98px
-		border: none
-		outline: none
-		text-transform: uppercase
-		font-family: Montserrat, sans-serif
-		font-weight: bold
 		font-size: 14px
 		line-height: 17px
 	&__list
@@ -97,6 +115,9 @@ body
 		align-items: center
 		color: #ffffff
 		text-decoration: none
+		transition: opacity .3s 
+		&:hover
+			opacity: .7
 	&__text
 		margin-top: 9px
 		font-size: 13px
@@ -106,6 +127,7 @@ body
 
 .header-bottom
 	height: 66px
+.header-nav
 	&__list
 		display: flex
 		justify-content: center
@@ -121,3 +143,199 @@ body
 		font-weight: normal
 		line-height: 17px
 		text-transform: uppercase
+		transition: opacity .3s 
+		&:hover
+			opacity: .7
+
+
+.product
+	&__contenet-wrapper
+		margin-top: 41px
+		padding: 47px 90px 100px 90px
+		box-shadow: 10px 0px 60px rgba(0, 4, 82, 0.16)
+		border-radius: 15px
+	&__content
+		padding-bottom: 40px
+		border-bottom: 1px solid #D8D8D8
+		display: flex
+	&__imgs
+		display: flex
+		flex-direction: column
+		align-items: center
+		flex-basis: 50%
+	&__single
+		margin-bottom: 39px
+		cursor: pointer
+	&__imgs-min
+		display: flex
+	&__description
+		flex-basis: 50%
+	&__title
+		margin-bottom: 55px
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		font-size: 24px
+		line-height: 150%
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 90%
+			background-color: #DDDDDD
+			height: 3px
+			bottom: -31px
+			left: 0
+	&__subtitle
+		font-family: Montserrat, sans-serif
+		font-weight: normal
+		font-size: 12px
+		line-height: 180%
+		color: rgba(56, 56, 56, .7)
+	&__weight
+		margin-top: 15px
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		span 
+			font-weight: normal
+
+.imgs-min
+	&__wrapper
+		margin-right: 23px
+		cursor: pointer
+
+
+.single-product
+	&__title
+		margin-top: 60px
+		font-family: Montserrat, sans-serif
+		text-align: center
+		font-size: 42px
+		line-height: 140%
+		color: #000000
+	&__list
+		margin-top: 56px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		width: 240px
+		height: 405px
+		padding: 14px
+		box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08)
+	&__desc
+		margin-top: 31px
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		font-size: 16px
+		line-height: 130%
+		text-align: center
+	&__price
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		font-size: 28px
+		line-height: 150%
+		color: #8C8C8C
+		text-align: center
+		margin-bottom: 5px
+	&__btn
+		border-radius: 100px
+		padding: 10px
+		
+.all-products
+	&__content
+		margin-top: 41px
+		padding: 47px 90px 100px 90px
+		box-shadow: 10px 0px 60px rgba(0, 4, 82, 0.16)
+		border-radius: 15px
+	&__top
+		height: 422px
+		border-bottom: 1px solid #D8D8D8
+		background: no-repeat url("../img/product/bg-all-products.png")
+		background-size: contain
+		border-radius: 15px 15px 0px 0px
+
+
+.brands
+	&__content
+		display: flex
+		flex-direction: column
+	&__list
+		display: flex
+		align-items: center
+		margin-bottom: 50px
+	&__item
+		margin-left: 28px
+	&__btn
+		padding: 16px 45px
+		width: 232px
+		height: 58px
+
+.about
+	margin-top: 70px
+	&__content
+		height: 472px
+		background: no-repeat url("../img/product/bg-about.png")
+		background-size: contain
+	&__wrapper
+		width: 469px
+		height: 352px
+		margin-left: 35px
+	&__title
+		padding-top: 73px
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		font-size: 42px
+		line-height: 140%
+		color: #FFFFFF
+		text-align: center
+	&__subtitle
+		font-family: Montserrat, sans-serif
+		font-size: 14px
+		line-height: 230%
+		color: #FFFFFF
+		text-align: center
+
+
+.policies
+	&__title
+		font-family: Montserrat, sans-serif
+		font-weight: bold
+		font-size: 42px
+		line-height: 140%
+		text-align: center
+		color: #000000
+		margin-bottom: 51px
+	&__list
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__img
+		margin-bottom: 22px
+
+.footer
+	&__content
+		margin-top: 41px
+		padding: 40px 90px 40px 90px
+		box-shadow: 10px 0px 60px rgba(0, 4, 82, 0.16)
+		border-radius: 15px
+	&__paymants
+		font-family: Open Sans , sans-serif
+		font-size: 14px
+		line-height: 19px
+		text-align: center
+		color: #979797
+		vertical-align: middle
+	&__copyright
+		margin-top: 39px
+		text-align: center
+		font-family: Open Sans , sans-serif
+		font-size: 14px
+		line-height: 200%
+		color: #000000
