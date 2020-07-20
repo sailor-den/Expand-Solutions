@@ -84,15 +84,11 @@ body
 
 .header-top
 	display: flex
-	// align-items: center
 	justify-content: space-between
-	// background: no-repeat url("../img/header-bg.svg")
-	// background-size: cover
-	// padding: 30px
 	background: linear-gradient(0deg, rgba(0, 85, 211, 0.9), rgba(0, 85, 211, 0.9))
 	height: 127px
 	&__btn
-		max-width: 206px
+		width: 206px
 		height: 51px
 		margin-top: 39px
 		margin-left: 29px
@@ -106,9 +102,6 @@ body
 		height: 36px
 		color: #ffffff
 		margin-right: 64px
-		// display: flex
-		// flex-direction: column
-		// align-items: center
 		&:last-child
 			margin-right: 78px
 	&__link
@@ -136,20 +129,15 @@ body
 			position: relative
 			display: block
 			z-index: 100	
-			max-width: 636px
+			width: 636px
 			min-height: 100px
 			background: #eaeaea
 			font-family: "Montserrat",sans-serif
 			font-size: calc(12px + .5rem)
-			// margin: 1em 0 0
 			margin-top: 29px
-			// padding: 1em
 			padding: 13px
 			li > a 
 					color: #575757
-
-
-
 
 
 
@@ -198,7 +186,6 @@ body
 		cursor: pointer
 	&__imgs-min
 		display: flex
-		flex-wrap: wrap
 	&__description
 		flex-basis: 50%
 	&__title
@@ -366,8 +353,6 @@ label
 	margin-right: 5px
 	display: inline-block
 	padding: 10px 20px
-	// background-color: #ecf0f1
-	// border-radius: 20px 20px 0 0
 
 input
 	display: none
@@ -401,12 +386,8 @@ input
 	&::before
 			content: ""
 			display: block
-			// border: 11px solid black
-			// border-top-width: 0
-			// border-bottom-color: #FDFCFC
 			position: absolute
 			top: -11px
-			// right: 0
 			left: 100px
 			width: 0
 			height: 0
@@ -420,7 +401,6 @@ input
 			display: block
 			position: absolute
 			top: -11px
-			// right: 0
 			left: 212px
 			width: 0
 			height: 0
@@ -434,7 +414,6 @@ input
 			display: block
 			position: absolute
 			top: -11px
-			// right: 0
 			left: 330px
 			width: 0
 			height: 0
@@ -448,7 +427,6 @@ input
 			display: block
 			position: absolute
 			top: -11px
-			// right: 0
 			left: 448px
 			width: 0
 			height: 0
@@ -463,7 +441,6 @@ input
 			display: block
 			position: absolute
 			top: -11px
-			// right: 0
 			left: 583px
 			width: 0
 			height: 0
@@ -478,7 +455,6 @@ input
 			display: block
 			position: absolute
 			top: -11px
-			// right: 0
 			left: 720px
 			width: 0
 			height: 0
@@ -583,6 +559,8 @@ input[id="tab_06"]:checked ~ .tabs > .tab_06,
 		font-size: 10px
 
 @media (max-width: 500px)
+	.product__imgs-min
+		flex-wrap: wrap
 	.header-nav__list
 		display: none
 	.product__title
