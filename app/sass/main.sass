@@ -67,6 +67,8 @@ body
 	margin:
 		left: auto
 		right: auto
+	padding-left: 15px
+	padding-right: 15px
 
 .header
 	&__logo
@@ -90,7 +92,7 @@ body
 	background: linear-gradient(0deg, rgba(0, 85, 211, 0.9), rgba(0, 85, 211, 0.9))
 	height: 127px
 	&__btn
-		width: 206px
+		max-width: 206px
 		height: 51px
 		margin-top: 39px
 		margin-left: 29px
@@ -124,6 +126,32 @@ body
 		font-family: Montserrat, sans-serif
 		font-weight: normal
 		line-height: 180%
+
+.tab-menu
+	display: none
+
+.header-top__item
+	&:hover
+		.tab-menu
+			position: relative
+			display: block
+			z-index: 100	
+			max-width: 636px
+			min-height: 100px
+			background: #eaeaea
+			font-family: "Montserrat",sans-serif
+			font-size: calc(12px + .5rem)
+			// margin: 1em 0 0
+			margin-top: 29px
+			// padding: 1em
+			padding: 13px
+			li > a 
+					color: #575757
+
+
+
+
+
 
 .header-bottom
 	height: 66px
@@ -163,11 +191,14 @@ body
 		flex-direction: column
 		align-items: center
 		flex-basis: 50%
+	&__img
+		max-width: 100%
 	&__single
 		margin-bottom: 39px
 		cursor: pointer
 	&__imgs-min
 		display: flex
+		flex-wrap: wrap
 	&__description
 		flex-basis: 50%
 	&__title
@@ -202,6 +233,8 @@ body
 	&__wrapper
 		margin-right: 23px
 		cursor: pointer
+	&__picture
+		max-width: 100%
 
 
 .card-product
@@ -221,7 +254,7 @@ body
 		display: flex
 		flex-direction: column
 		justify-content: space-between
-		width: 240px
+		max-width: 240px
 		height: 405px
 		padding: 14px
 		box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08)
@@ -259,6 +292,8 @@ body
 
 
 .brands
+	&__img
+		max-width: 100%
 	&__list
 		display: flex
 		align-items: center
@@ -267,7 +302,7 @@ body
 		margin-left: 28px
 	&__btn
 		padding: 16px 45px
-		width: 232px
+		max-width: 232px
 		height: 58px
 
 .about
@@ -277,7 +312,7 @@ body
 		background: no-repeat url("../img/product/bg-about.png")
 		background-size: contain
 	&__wrapper
-		width: 469px
+		max-width: 469px
 		height: 352px
 		margin-left: 35px
 	&__title
@@ -306,9 +341,8 @@ body
 		color: #000000
 		margin-bottom: 51px
 	&__list
-		display: flex
-		align-items: center
-		justify-content: space-between
+		text-align: center
+		width: 100%
 		margin-bottom: 27px
 	&__link	
 		text-decoration: none
@@ -321,16 +355,19 @@ body
 		align-items: center
 	&__img
 		margin-bottom: 22px
-
+	&-tab
+		&__title
+			text-align: center
+	
 
 
 label
 	cursor: pointer
 	margin-right: 5px
 	display: inline-block
-	padding: 10px 30px
-	background-color: #ecf0f1
-	border-radius: 20px 20px 0 0
+	padding: 10px 20px
+	// background-color: #ecf0f1
+	// border-radius: 20px 20px 0 0
 
 input
 	display: none
@@ -355,9 +392,101 @@ input
 		color: #8A8A8A
 		background: #FDFCFC
 		border: 1px solid #E2E2E2
+		text-align: left
 		display: none
+		
 	
 	
+.tab_01
+	&::before
+			content: ""
+			display: block
+			// border: 11px solid black
+			// border-top-width: 0
+			// border-bottom-color: #FDFCFC
+			position: absolute
+			top: -11px
+			// right: 0
+			left: 100px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #979797
+
+.tab_02
+	&::before
+			content: ""
+			display: block
+			position: absolute
+			top: -11px
+			// right: 0
+			left: 212px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #979797
+
+.tab_03
+	&::before
+			content: ""
+			display: block
+			position: absolute
+			top: -11px
+			// right: 0
+			left: 330px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #979797
+
+.tab_04
+	&::before
+			content: ""
+			display: block
+			position: absolute
+			top: -11px
+			// right: 0
+			left: 448px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #979797
+
+
+.tab_05
+	&::before
+			content: ""
+			display: block
+			position: absolute
+			top: -11px
+			// right: 0
+			left: 583px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #979797
+
+
+.tab_06
+	&::before
+			content: ""
+			display: block
+			position: absolute
+			top: -11px
+			// right: 0
+			left: 720px
+			width: 0
+			height: 0
+			border-left: 11px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #979797
+
+
 	
 input:checked + label
 	color: red
@@ -371,13 +500,6 @@ input[id="tab_06"]:checked ~ .tabs > .tab_06,
 	display: block
 
 	
-
-
-
-	
-		
-
-
 .footer
 	margin-bottom: 309px
 	&__content
@@ -408,3 +530,66 @@ input[id="tab_06"]:checked ~ .tabs > .tab_06,
 		margin-right: 5px
 
 
+@media (max-width: 1024px)
+	.header-top__btn
+		font-size: 12px
+		width: 150px
+	.header-top__item
+		margin-right: 45px
+	.header-nav__item
+		flex-basis: 15%
+	.header-nav__link
+		font-size: 12px
+	.product__content
+		flex-direction: column
+	.card-product__title
+		font-size: 32px
+	.card-product__list
+		flex-direction: column
+	.card-product__item
+		margin-bottom: 15px
+	.about__content
+		background: #0055D3
+	.about__wrapper
+		margin: auto
+	.about__title
+		font-size: 32px
+	.about__subtitle
+		font-size: 12px
+	.policies
+		display: none
+		
+
+@media (max-width: 902px)
+	.all-products__top
+		background: #fff
+	.brands
+		text-align: center
+	.brands__logo
+		text-align: center
+	.brands__list
+		justify-content: center
+	
+@media (max-width: 768px)
+	.header-top__btn
+		margin: auto
+	.header-top__list
+		display: none
+	.about__wrapper
+		padding: 15px
+		
+@media (max-width: 670px)
+	.header-nav__link
+		font-size: 10px
+
+@media (max-width: 500px)
+	.header-nav__list
+		display: none
+	.product__title
+		font-size: 12px
+	.about
+		display: none
+
+@media (max-width: 482px)
+	.header__logo
+		display: none
