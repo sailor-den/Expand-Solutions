@@ -309,12 +309,73 @@ body
 		display: flex
 		align-items: center
 		justify-content: space-between
+		margin-bottom: 27px
+	&__link	
+		text-decoration: none
+		display: flex
+		flex-direction: column
+		align-items: center
 	&__item
 		display: flex
 		flex-direction: column
 		align-items: center
 	&__img
 		margin-bottom: 22px
+
+
+
+label
+	cursor: pointer
+	margin-right: 5px
+	display: inline-block
+	padding: 10px 30px
+	background-color: #ecf0f1
+	border-radius: 20px 20px 0 0
+
+input
+	display: none
+
+.tabs
+	position: relative
+	height: 290px
+
+.tabs
+	margin-top: 27px
+	&__block
+		width: 845px
+		height: 283px
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #fff
+		padding: 30px
+		font-family: Montserrat, sans-serif
+		font-size: 14px
+		line-height: 180%
+		color: #8A8A8A
+		background: #FDFCFC
+		border: 1px solid #E2E2E2
+		display: none
+	
+	
+	
+input:checked + label
+	color: red
+
+input[id="tab_01"]:checked ~ .tabs > .tab_01,
+input[id="tab_02"]:checked ~ .tabs > .tab_02,
+input[id="tab_03"]:checked ~ .tabs > .tab_03,
+input[id="tab_04"]:checked ~ .tabs > .tab_04,
+input[id="tab_05"]:checked ~ .tabs > .tab_05,
+input[id="tab_06"]:checked ~ .tabs > .tab_06,
+	display: block
+
+	
+
+
+
+	
+		
 
 
 .footer
@@ -341,7 +402,7 @@ body
 		line-height: 200%
 		color: #000000
 
-	
+
 .paymants
 	&__title
 		margin-right: 5px
